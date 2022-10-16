@@ -134,7 +134,7 @@ public class Red {
 		Vendedor vendedorFound = null;
 
 		try {
-			vendedorFound  = verifyVendedor(newVendedor.getNombre(), newVendedor.getCedula());
+			vendedorFound  = verifyVendedor(newVendedor.getCedula());
 			listaUsuarios.add(newVendedor);
 			messaje = "Vendedor Creado exitosamente";
 
@@ -152,12 +152,12 @@ public class Red {
 	 * @return
 	 * @throws VendedorException
 	 */
-	private Vendedor verifyVendedor(String name, String id) throws VendedorException {
+	public Vendedor verifyVendedor(String id) throws VendedorException {
 		
 		Vendedor vendedorFound = null;
 		for(Usuario seller : listaUsuarios) {
 			if(seller instanceof Vendedor) {
-				if(seller.getNombre().equals(name)&& seller.getCedula().equals(id)) {
+				if(seller.getCedula().equals(id)) {
 					vendedorFound = (Vendedor) seller;
 					throw new VendedorException ("Imposible crear el vendedor, esta ye existe");
 				}
@@ -272,7 +272,7 @@ public class Red {
 		Administrador AdministradorFound = null;
 
 		try {
-			AdministradorFound  = verifyAdministrador(newAdministrador.getNombre(), newAdministrador.getCedula());
+			AdministradorFound  = verifyAdministrador(newAdministrador.getCedula());
 			listaUsuarios.add(newAdministrador);
 
 		} catch (AdministradorException e) {
@@ -289,7 +289,7 @@ public class Red {
 	 * @return
 	 * @throws AdministradorException
 	 */
-	private Administrador verifyAdministrador(String name, String id) throws AdministradorException {
+	public Administrador verifyAdministrador(String id) throws AdministradorException {
 		
 		Administrador administradorFound= null;
 		for(Usuario administrator : listaUsuarios) {
@@ -314,7 +314,7 @@ public class Red {
 	 * @return
 	 * @throws AdministradorException
 	 */
-	public Administrador readAdministrador(String name, String id) throws AdministradorException {
+	public Administrador readAdministrador(String id) throws AdministradorException {
 
 		Administrador administradorFound = null;
 		for(Usuario administrator : listaUsuarios) {
@@ -430,7 +430,7 @@ public class Red {
 	 * @return
 	 * @throws ProductoException
 	 */
-	private Producto verifyProducto(String code) throws ProductoException {
+	public Producto verifyProducto(String code) throws ProductoException {
 		
 		Producto productoFound = null;
 		for(Producto product : listaProductos) {
@@ -452,7 +452,7 @@ public class Red {
 	 * @return
 	 * @throws ProductoException
 	 */
-	private Producto readProducto(String code) throws ProductoException {
+	public Producto readProducto(String code) throws ProductoException {
 		
 		Producto productoFound = null;
 		for(Producto product : listaProductos) {
@@ -463,7 +463,7 @@ public class Red {
 			throw new ProductoException("Imposible encontrar el producto, intenta de nuevo");
 		}
 	
-		return null;
+		return productoFound;
 	}
 
 	/**

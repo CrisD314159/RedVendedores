@@ -25,10 +25,18 @@ public class TestUnit extends TestCase {
 	
 	
 	//JUnits de Vendedor
-	public void testcreateVendedor() {
+	public void testcreateVendedor() throws VendedorException {
 		TestRed();
+		assertTrue(red1.verifyVendedor("124628") == null);
 		assertTrue(red1.createVendedor(vendedor1) == "Vendedor Creado exitosamente");
 		
+		
+	}
+	
+	public void testreadVendedor() throws VendedorException {
+		TestRed();
+		red1.createVendedor(vendedor1);
+		assertTrue(red1.readVendedor("124628") == vendedor1);
 		
 	}
 	
@@ -50,10 +58,18 @@ public class TestUnit extends TestCase {
 	
 	// JUnits de Administrador
 	
-	public void testCreateAdministrador() {
+	public void testCreateAdministrador() throws AdministradorException {
 		TestRed();
+		assertTrue(red1.verifyAdministrador("24135") == null);
 		assertTrue(red1.createAdministrador(admin1) == "Administrador Creado");
 		
+		
+	}
+	
+	public void testreadAdministrador() throws AdministradorException {
+		TestRed();
+		red1.createAdministrador(admin1);
+		assertTrue(red1.readAdministrador("24135") == admin1);
 		
 	}
 	
@@ -75,10 +91,18 @@ public class TestUnit extends TestCase {
 	
 	// JUnits de Producto
 	
-	public void testCreateProducto() {
+	public void testCreateProducto() throws ProductoException {
 		TestRed();
+		assertTrue(red1.verifyProducto("15672") == null);
 		assertTrue(red1.createProducto(product1) == "Producto creado");
 		
+		
+	}
+	
+	public void testreadProducto() throws ProductoException {
+		TestRed();
+		red1.createProducto(product1);
+		assertTrue(red1.readProducto("15672") == product1);
 		
 	}
 	
