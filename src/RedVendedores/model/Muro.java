@@ -8,7 +8,12 @@ public class Muro {
 	private String comentarios;
 	private int me_gusta;
 	
-	
+	/**
+	 * Metodo constructor de la clase Muro
+	 * @param mensaje
+	 * @param comentarios
+	 * @param me_gusta
+	 */
 	public Muro(String mensaje, String comentarios, int me_gusta) {
 		super();
 		this.setMensaje(mensaje);
@@ -16,32 +21,50 @@ public class Muro {
 		this.setMe_gusta(me_gusta);
 	}
 
-
+	/**
+	 * get del atributo mensaje
+	 * @return
+	 */
 	public String getMensaje() {
 		return mensaje;
 	}
 
-
+	/**
+	 * set del atributo mensaje
+	 * @param mensaje
+	 */
 	public void setMensaje(String mensaje) {
 		this.mensaje = mensaje;
 	}
 
-
+	/**
+	 * get del atributo comentarios
+	 * @return
+	 */
 	public String getComentarios() {
 		return comentarios;
 	}
 
-
+	/**
+	 * set del atributo comentarios
+	 * @param comentarios
+	 */
 	public void setComentarios(String comentarios) {
 		this.comentarios = comentarios;
 	}
 
-
+	/**
+	 * get de el atributo me_gusta
+	 * @return
+	 */
 	public int getMe_gusta() {
 		return me_gusta;
 	}
 
-
+	/**
+	 * set del atributo me_gusta
+	 * @param me_gusta
+	 */
 	public void setMe_gusta(int me_gusta) {
 		this.me_gusta = me_gusta;
 	}

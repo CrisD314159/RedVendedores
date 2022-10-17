@@ -10,38 +10,63 @@ public class Vendedor extends Usuario {
 	private ArrayList<Vendedor> listaVendedores = new ArrayList<Vendedor>();
 	private ArrayList<Producto> listaProducto = new ArrayList<Producto>();
 	
-	
+	/**
+	 * Metodo constructor del vendedor
+	 * @param nombre
+	 * @param apellidos
+	 * @param direccion
+	 * @param cedula
+	 * @param muro
+	 */
 	public Vendedor(String nombre, String apellidos, String direccion, String cedula, Muro muro) {
 		super(nombre, apellidos, direccion, cedula);
 		this.setMuro(muro);
 	}
 
-
+	/**
+	 * get del muro
+	 * @return
+	 */
 	public Muro getMuro() {
 		return muro;
 	}
 
-
+	/**
+	 * set del muro
+	 * @param muro
+	 */
 	public void setMuro(Muro muro) {
 		this.muro = muro;
 	}
 
-
+	/**
+	 * get de listaVendedores
+	 * @return
+	 */
 	public ArrayList<Vendedor> getListaVendedores() {
 		return listaVendedores;
 	}
 
-
+	/**
+	 * set de listaVendedores
+	 * @param listaVendedores
+	 */
 	public void setListaVendedores(ArrayList<Vendedor> listaVendedores) {
 		this.listaVendedores = listaVendedores;
 	}
 
-
+	/**
+	 * get de listaProducto
+	 * @return
+	 */
 	public ArrayList<Producto> getListaProducto() {
 		return listaProducto;
 	}
 
-
+	/**
+	 * set de listaProducto
+	 * @param listaProducto
+	 */
 	public void setListaProducto(ArrayList<Producto> listaProducto) {
 		this.listaProducto = listaProducto;
 	}
@@ -78,7 +103,6 @@ public class Vendedor extends Usuario {
 	
 	
 	
-	//---- Crud muro -----
 	
 	
 	

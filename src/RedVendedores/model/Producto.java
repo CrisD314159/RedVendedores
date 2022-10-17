@@ -11,7 +11,14 @@ public class Producto {
 	private double precio;
 	private TipoEstado tipoEstado;
 	
-	
+	/**
+	 * constructor de producto
+	 * @param nombre
+	 * @param codigo
+	 * @param categoria
+	 * @param precio
+	 * @param tipoEstado
+	 */
 	public Producto(String nombre, String codigo, String categoria, double precio, TipoEstado tipoEstado) {
 		super();
 		this.nombre = nombre;
@@ -21,52 +28,82 @@ public class Producto {
 		this.tipoEstado = tipoEstado;
 	}
 
-
+	/**
+	 * get de el atributo nombre
+	 * @return
+	 */
 	public String getNombre() {
 		return nombre;
 	}
 
-
+	/**
+	 * set de el atributo nombre
+	 * @param nombre
+	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
-
+	/**
+	 * get del atributo codigo
+	 * @return
+	 */
 	public String getCodigo() {
 		return codigo;
 	}
 
-
+	/**
+	 * set del atributo codigo
+	 * @param codigo
+	 */
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
 
-
+	/**
+	 * get del atributo categoria
+	 * @return
+	 */
 	public String getCategoria() {
 		return categoria;
 	}
 
-
+	/**
+	 * set del atributo categoria
+	 * @param categoria
+	 */
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
 
-
+	/**
+	 * get del atributo precio
+	 * @return
+	 */
 	public double getPrecio() {
 		return precio;
 	}
 
-
+	/**
+	 * set del atributo precio
+	 * @param precio
+	 */
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
 
-
+	/**
+	 * get del TipoEstado
+	 * @return
+	 */
 	public TipoEstado getTipoEstado() {
 		return tipoEstado;
 	}
 
-
+	/**
+	 * Set del TipoEstado
+	 * @param tipoEstado
+	 */
 	public void setTipoEstado(TipoEstado tipoEstado) {
 		this.tipoEstado = tipoEstado;
 	}

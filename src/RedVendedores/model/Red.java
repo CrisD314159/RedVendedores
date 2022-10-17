@@ -17,7 +17,7 @@ public class Red {
 	
 	
 	/**
-	 * metodo contructor de red
+	 * metodo constructor de red
 	 * @param nombre
 	 */
 	public Red(String nombre) {
@@ -447,7 +447,7 @@ public class Red {
 	
 	
 	/**
-	 * Este metodo obtien un producto por su codigo
+	 * Este metodo obtiene un producto por su codigo
 	 * @param code
 	 * @return
 	 * @throws ProductoException
